@@ -5,64 +5,89 @@ import { useState, useEffect } from 'react';
 interface TypewriterEffectProps {
   text?: string;
   texts?: string[];
-  className?: string;
   speed?: number;
   deleteSpeed?: number;
   delaySpeed?: number;
+  className?: string;
+  showCursor?: boolean;
+  cursorChar?: string;
 }
 
 const TypewriterEffect = ({ 
-  text, 
-  texts, 
-  className = '', 
+  text,
+  texts,
   speed = 100,
   deleteSpeed = 50,
-  delaySpeed = 2000
+  delaySpeed = 2000,
+  className = '',
+  showCursor = true,
+  cursorChar = '|'
 }: TypewriterEffectProps) => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
 
-  // Use texts array if provided, otherwise fall back to single text
+  // Use texts array if provided, otherwise fallback to single text
   const textArray = texts || (text ? [text] : ['']);
-  const currentText = textArray[currentTextIndex] || '';
+  const isMultipleTexts = texts && texts.length > 1;
 
   useEffect(() => {
-    if (textArray.length === 0) return;
-
+    const currentText = textArray[currentIndex] || '';
+    
     const timeout = setTimeout(() => {
+      if (isPaused) {
+        setIsPaused(false);
+        if (isMultipleTexts) {
+          setIsDeleting(true);
+        }
+        return;
+      }
+
       if (!isDeleting) {
         // Typing
-        if (currentIndex < currentText.length) {
-          setDisplayText(prev => prev + currentText[currentIndex]);
-          setCurrentIndex(prev => prev + 1);
+        if (displayText.length < currentText.length) {
+          setDisplayText(currentText.slice(0, displayText.length + 1));
         } else {
-          // Finished typing, wait then start deleting (only if multiple texts)
-          if (textArray.length > 1) {
-            setTimeout(() => setIsDeleting(true), delaySpeed);
+          // Finished typing
+          if (isMultipleTexts) {
+            setIsPaused(true);
           }
         }
       } else {
         // Deleting
         if (displayText.length > 0) {
-          setDisplayText(prev => prev.slice(0, -1));
+          setDisplayText(displayText.slice(0, -1));
         } else {
-          // Finished deleting, move to next text
+          // Finished deleting
           setIsDeleting(false);
-          setCurrentIndex(0);
-          setCurrentTextIndex(prev => (prev + 1) % textArray.length);
+          setCurrentIndex((prev) => (prev + 1) % textArray.length);
         }
       }
-    }, isDeleting ? deleteSpeed : speed);
+    }, isPaused ? delaySpeed : isDeleting ? deleteSpeed : speed);
 
     return () => clearTimeout(timeout);
-  }, [currentIndex, currentText, displayText, isDeleting, textArray, speed, deleteSpeed, delaySpeed]);
+  }, [displayText, currentIndex, isDeleting, isPaused, textArray, speed, deleteSpeed, delaySpeed, isMultipleTexts]);
 
   return (
     <span className={className}>
       {displayText}
-      <span className="animate-pulse text-primary">|</span>
+      {showCursor && (
+        <span 
+          className="animate-pulse text-primary ml-1"
+          style={{
+            animation: 'blink 1s infinite',
+          }}
+        >
+          {cursorChar}
+        </span>
+      )}
+      <style jsx>{`
+        @keyframes blink {
+          0%, 50% { opacity: 1; }
+          51%, 100% { opacity: 0; }
+        }
+      `}</style>
     </span>
   );
 };
