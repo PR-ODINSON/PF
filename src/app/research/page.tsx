@@ -1,7 +1,7 @@
 'use client';
 
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useState, useRef } from 'react';
+import { motion, useScroll, useTransform, useMotionValue, AnimatePresence } from 'framer-motion';
+import { useState, useRef, useEffect } from 'react';
 import { 
   Brain, Activity, Users, BookOpen, ExternalLink, Calendar, Target, 
   Microscope, Atom, Rocket, Sparkles, Zap, Globe, Network, Database, 
@@ -18,6 +18,20 @@ const ResearchPage = () => {
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
   const [searchTerm, setSearchTerm] = useState('');
   const [expandedAbstract, setExpandedAbstract] = useState<number | null>(null);
+  
+  // Neural network interactive states
+  const [activeNeuron, setActiveNeuron] = useState<number | null>(null);
+  const [stableActiveNeuron, setStableActiveNeuron] = useState<number | null>(null);
+  const [selectedResearch, setSelectedResearch] = useState<number | null>(null);
+  const [isQuantumMode, setIsQuantumMode] = useState(false);
+  const [labEquipmentActive, setLabEquipmentActive] = useState<string[]>([]);
+  const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
+  
+  // Motion values for mouse tracking
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  const quantumRotation = useMotionValue(0);
+  const neuralY = useMotionValue(0);
   
   const { scrollYProgress } = useScroll({
     target: containerRef,
