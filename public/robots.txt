@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://prithviraj-verma.vercel.app/sitemap.xml
+
+# Disallow certain paths (add as needed)
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/ 
