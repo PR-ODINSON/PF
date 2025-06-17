@@ -1,29 +1,30 @@
 'use client';
 
-import { motion, useScroll, useTransform, useMotionValue, useSpring, AnimatePresence } from 'framer-motion';
-import { useState, useRef, useEffect } from 'react';
-import { Brain, Activity, Users, BookOpen, ExternalLink, Calendar, Target, Microscope, Atom, Dna, Rocket, Sparkles, Zap, Globe, Network, Database, Cpu, Eye, Shield, GitBranch, TrendingUp, Star, Beaker, FlaskConical, TestTube, ChevronRight, Play, Pause, RotateCcw } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useState, useRef } from 'react';
+import { 
+  Brain, Activity, Users, BookOpen, ExternalLink, Calendar, Target, 
+  Microscope, Atom, Rocket, Sparkles, Zap, Globe, Network, Database, 
+  Cpu, Eye, Shield, GitBranch, TrendingUp, Star, Beaker, FlaskConical, 
+  TestTube, ChevronRight, Play, FileText, Download, Code, Award,
+  Clock, MapPin, DollarSign, Tag, Search, Filter, SortAsc, SortDesc
+} from 'lucide-react';
+import Link from 'next/link';
 
 const ResearchPage = () => {
-  const [activeNeuron, setActiveNeuron] = useState<number | null>(null);
-  const [selectedResearch, setSelectedResearch] = useState<number | null>(null);
-  const [isQuantumMode, setIsQuantumMode] = useState(false);
-  const [labEquipmentActive, setLabEquipmentActive] = useState<string[]>([]);
-  
-  // Throttle hover to prevent glitching
-  const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
-  const [stableActiveNeuron, setStableActiveNeuron] = useState<number | null>(null);
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
   const containerRef = useRef<HTMLDivElement>(null);
-
+  const [selectedFilter, setSelectedFilter] = useState('All');
+  const [sortBy, setSortBy] = useState('year');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [expandedAbstract, setExpandedAbstract] = useState<number | null>(null);
+  
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"]
   });
 
-  const neuralY = useTransform(scrollYProgress, [0, 1], [0, -100]);
-  const quantumRotation = useTransform(scrollYProgress, [0, 1], [0, 360]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
