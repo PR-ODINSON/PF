@@ -106,152 +106,128 @@ const ProjectsPage = () => {
   const projects = [
     {
       id: 1,
-      title: 'Neural Interface Laboratory',
-      subtitle: 'Consciousness Recognition Reactor',
-      description: 'Interdimensional neural interface for mapping human consciousness patterns through quantum physiological signal processing. Operating at the intersection of mind and machine.',
-      technologies: ['Quantum PyTorch', 'Neural Python', 'Consciousness Processing', 'Deep Mind Learning', 'Quantum TensorFlow', 'Bio-NumPy'],
-      category: 'quantum-ai',
-      status: 'Active Experiment',
+      title: '📌 AscendOS',
+      subtitle: 'Full-Stack Productivity OS',
+      description: 'A complete productivity operating system with Notion-style UI and integrated AI agents for resume parsing and intelligent job matching.',
+      technologies: ['Next.js', 'TailwindCSS', 'PostgreSQL', 'NestJS', 'Python', 'Cursor API'],
+      category: 'product',
+      status: 'In Development',
       completion: 85,
-      githubUrl: 'https://github.com/PR-ODINSON',
+      githubUrl: 'https://github.com/PR-ODINSON/solo-leveling',
+      liveUrl: '#',
+      icon: Rocket,
+      year: '2024',
+      stats: { 
+        features: '15+ modules', 
+        ai_agents: '3 integrated', 
+        performance: 'Optimized',
+        stack: 'Full-stack'
+      },
+      color: 'blue',
+      particleCount: 15,
+      energyType: 'product'
+    },
+    {
+      id: 2,
+      title: '📌 Startup Validator',
+      subtitle: 'AI-Powered Idea Validation',
+      description: 'Intelligent tool that evaluates startup ideas and provides comprehensive validation scores using advanced market analysis and keyword clustering.',
+      technologies: ['Python', 'OpenAI API', 'Streamlit', 'BeautifulSoup', 'LDA', 'NLTK'],
+      category: 'ai',
+      status: 'Production Ready',
+      completion: 100,
+      githubUrl: 'https://github.com/PR-ODINSON/startup-validator',
+      liveUrl: '#',
+      icon: TrendingUp,
+      year: '2024',
+      stats: { 
+        accuracy: '92%', 
+        startups: '500+ validated', 
+        metrics: '12 factors',
+        speed: 'Real-time'
+      },
+      color: 'emerald',
+      particleCount: 12,
+      energyType: 'ai'
+    },
+    {
+      id: 3,
+      title: '📌 Mindscan',
+      subtitle: 'Mental Health Prediction ML',
+      description: 'Advanced machine learning model that predicts mental health issues using survey responses with industry-leading 95%+ accuracy rates.',
+      technologies: ['Scikit-learn', 'Python', 'Logistic Regression', 'Pandas', 'Seaborn'],
+      category: 'ml',
+      status: 'Model Complete',
+      completion: 100,
+      githubUrl: 'https://github.com/PR-ODINSON/mindscan',
       liveUrl: '#',
       icon: Brain,
       year: '2024',
       stats: { 
-        consciousness: '95%', 
-        dimensions: '7D', 
-        resonance: '10Hz',
-        stability: 'High'
+        accuracy: '95.3%', 
+        precision: '94.8%', 
+        recall: '96.1%',
+        f1_score: '95.4%'
       },
-      color: 'blue',
-      particleCount: 12,
-      energyType: 'neural'
-    },
-    {
-      id: 2,
-      title: 'Seismic Prediction Reactor',
-      subtitle: 'Geological Quantum Resonance',
-      description: 'Quantum seismic prediction reactor analyzing Earth\'s vibrational frequencies across multiple dimensions. Predicting geological events through planetary consciousness patterns.',
-      technologies: ['Quantum Python', 'Seismic-learn', 'Geo-Pandas', 'Dimensional-Plot', 'Earth Science', 'Quantum GIS'],
-      category: 'quantum-earth',
-      status: 'Experiment Complete',
-      completion: 100,
-      githubUrl: 'https://github.com/PR-ODINSON/Earthquake-Prediction-Model',
-      liveUrl: '#',
-      icon: Zap,
-      year: '2024',
-      stats: { 
-        resonance: '87%', 
-        frequencies: '10K+', 
-        predictions: '500+',
-        stability: 'Critical'
-      },
-      color: 'amber',
-      particleCount: 15,
-      energyType: 'seismic'
-    },
-    {
-      id: 3,
-      title: 'Vision Recognition Matrix',
-      subtitle: 'Quantum Identity Decoder',
-      description: 'Interdimensional vision recognition matrix capable of identifying consciousness patterns across multiple reality layers. Advanced quantum facial mapping through dimensional space.',
-      technologies: ['Quantum OpenCV', 'Reality TensorFlow', 'Dimensional Python', 'Quantum CNN', 'Multi-Vision', 'Quantum CUDA'],
-      category: 'quantum-vision',
-      status: 'Matrix Active',
-      completion: 100,
-      githubUrl: 'https://github.com/PR-ODINSON/Face_recognition_model',
-      liveUrl: '#',
-      icon: Eye,
-      year: '2024',
-      stats: { 
-        precision: '99.2%', 
-        identities: '1K+', 
-        dimensions: '30D',
-        clarity: 'Ultra'
-      },
-      color: 'emerald',
+      color: 'purple',
       particleCount: 10,
-      energyType: 'vision'
+      energyType: 'ml'
     },
     {
       id: 4,
-      title: 'Cybersecurity Fortress',
-      subtitle: 'Quantum Defense Matrix',
-      description: 'Interdimensional cybersecurity fortress protecting digital realms across multiple universes. Quantum threat detection with perfect dimensional barrier integrity.',
-      technologies: ['Quantum Python', 'Reality Learning', 'Cyber-Quantum', 'Multi-Networking', 'Quantum-learn', 'Dimensional-Pandas'],
-      category: 'quantum-security',
-      status: 'Fortress Online',
-      completion: 100,
-      githubUrl: 'https://github.com/PR-ODINSON/Network-Activity-Anomaly-Detection',
-      liveUrl: '#',
-      icon: Shield,
-      year: '2024',
-      stats: { 
-        threats: '99.8%', 
-        networks: '50+', 
-        protocols: '25+',
-        uptime: '100%'
-      },
-      color: 'purple',
-      particleCount: 8,
-      energyType: 'security'
-    },
-    {
-      id: 5,
-      title: 'Creative Universe Chamber',
-      subtitle: 'Quantum Imagination Engine',
-      description: 'Interdimensional creative universe chamber generating infinite possibilities through quantum imagination algorithms. Transforming consciousness into digital reality.',
-      technologies: ['Quantum React', 'Reality.js', 'Dimensional CSS', 'Creative APIs', 'Quantum Node', 'Universe-Express'],
-      category: 'quantum-creative',
-      status: 'Universe Active',
-      completion: 95,
-      githubUrl: 'https://github.com/PR-ODINSON/HealthCare-AI-Chatbot',
-      liveUrl: '#',
-      icon: Sparkles,
-      year: '2024',
-      stats: { 
-        creativity: '∞%', 
-        universes: '1M+', 
-        dimensions: '12D',
-        inspiration: 'Max'
-      },
-      color: 'teal',
-      particleCount: 20,
-      energyType: 'creative'
-    },
-    {
-      id: 6,
-      title: 'Information Analysis Observatory',
-      subtitle: 'Quantum Data Consciousness',
-      description: 'Interdimensional information analysis observatory processing consciousness data across multiple reality streams. Advanced pattern recognition through quantum mental health algorithms.',
-      technologies: ['Quantum Python', 'Consciousness-learn', 'Mental-Pandas', 'Reality-Plot', 'Quantum NLP', 'Mind-Processing'],
-      category: 'quantum-mind',
-      status: 'Observatory Online',
+      title: '📌 AI Telemedicine System',
+      subtitle: 'Intelligent Medical Assistant',
+      description: 'Sophisticated virtual medical assistant that recommends personalized treatments based on symptoms using NLP and comprehensive medical databases.',
+      technologies: ['Python', 'OpenAI API', 'LangChain', 'FastAPI', 'MongoDB'],
+      category: 'ai',
+      status: 'Beta Testing',
       completion: 90,
-      githubUrl: 'https://github.com/PR-ODINSON/Mental-Health-Analysis',
+      githubUrl: 'https://github.com/PR-ODINSON/ai-telemedicine',
       liveUrl: '#',
       icon: Activity,
       year: '2024',
       stats: { 
-        insights: '95%', 
-        patterns: '5K+', 
-        minds: '1K+',
-        wellness: 'High'
+        accuracy: '89%', 
+        response_time: '150ms', 
+        conditions: '200+ covered',
+        database: '50K+ records'
+      },
+      color: 'teal',
+      particleCount: 14,
+      energyType: 'ai'
+    },
+    {
+      id: 5,
+      title: '📌 Sleep Disorder Research',
+      subtitle: 'Published Research & Detection',
+      description: 'Cutting-edge research projects on insomnia and sleep disorder detection using PPG, EEG/ECG signals with deep learning architectures.',
+      technologies: ['PyTorch', 'CWT', 'CNN', 'ViT', 'Signal Processing', 'MATLAB'],
+      category: 'research',
+      status: 'Published & Under Review',
+      completion: 95,
+      githubUrl: 'https://github.com/PR-ODINSON/ppg-insomnia-detection',
+      githubUrl2: 'https://github.com/PR-ODINSON/sleep-disorder-detection',
+      liveUrl: '#',
+      icon: Microscope,
+      year: '2024',
+      stats: { 
+        publications: '2 papers', 
+        accuracy: '93.2%', 
+        datasets: '3 validated',
+        citations: 'Pending'
       },
       color: 'rose',
-      particleCount: 12,
-      energyType: 'mental'
+      particleCount: 16,
+      energyType: 'research'
     }
   ];
 
   const categories = [
-    { id: 'all', label: 'All Experiments', icon: AtomIcon, count: projects.length },
-    { id: 'quantum-ai', label: 'Quantum AI', icon: Brain, count: projects.filter(p => p.category === 'quantum-ai').length },
-    { id: 'quantum-earth', label: 'Earth Sciences', icon: Zap, count: projects.filter(p => p.category === 'quantum-earth').length },
-    { id: 'quantum-vision', label: 'Vision Matrix', icon: Eye, count: projects.filter(p => p.category === 'quantum-vision').length },
-    { id: 'quantum-security', label: 'Security Fortress', icon: Shield, count: projects.filter(p => p.category === 'quantum-security').length },
-    { id: 'quantum-creative', label: 'Creative Universe', icon: Sparkles, count: projects.filter(p => p.category === 'quantum-creative').length },
-    { id: 'quantum-mind', label: 'Mind Observatory', icon: Activity, count: projects.filter(p => p.category === 'quantum-mind').length }
+    { id: 'all', label: 'All Projects', icon: AtomIcon, count: projects.length },
+    { id: 'ai', label: 'AI', icon: Brain, count: projects.filter(p => p.category === 'ai').length },
+    { id: 'ml', label: 'ML', icon: Cpu, count: projects.filter(p => p.category === 'ml').length },
+    { id: 'research', label: 'Research', icon: Microscope, count: projects.filter(p => p.category === 'research').length },
+    { id: 'product', label: 'Product', icon: Rocket, count: projects.filter(p => p.category === 'product').length }
   ];
 
   const filteredProjects = filter === 'all' ? projects : projects.filter(p => p.category === filter);
@@ -304,7 +280,7 @@ const ProjectsPage = () => {
     return (
       <motion.div
         ref={cardRef}
-        className="relative w-96 h-[520px] perspective-1000"
+        className="relative w-full max-w-sm mx-auto h-[580px] perspective-1000"
         initial={{ opacity: 0, y: 100, rotateX: 45 }}
         animate={{ opacity: 1, y: 0, rotateX: 0 }}
         transition={{ 
@@ -627,7 +603,7 @@ const ProjectsPage = () => {
 
               {/* ACTION BUTTONS - FLOATING */}
               <motion.div 
-                className="flex justify-center space-x-4 mt-auto"
+                className="flex justify-center space-x-3 mt-auto flex-wrap gap-2"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isHovered ? 1 : 0.7, y: isHovered ? 0 : 10 }}
                 transition={{ duration: 0.3 }}
@@ -636,7 +612,7 @@ const ProjectsPage = () => {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`relative px-6 py-3 ${theme.iconBg} rounded-xl border-2 ${theme.iconBorder} shadow-lg backdrop-blur-sm font-semibold text-white overflow-hidden group`}
+                  className={`relative px-4 py-2 ${theme.iconBg} rounded-lg border-2 ${theme.iconBorder} shadow-lg backdrop-blur-sm font-medium text-white overflow-hidden group text-sm`}
                   whileHover={{ 
                     scale: 1.05, 
                     y: -2,
@@ -650,11 +626,38 @@ const ProjectsPage = () => {
                     whileHover={{ x: '100%' }}
                     transition={{ duration: 0.5 }}
                   />
-                  <span className="relative z-10 flex items-center space-x-2">
-                    <Github className="w-4 h-4" />
-                    <span>View Code</span>
+                  <span className="relative z-10 flex items-center space-x-1">
+                    <Github className="w-3 h-3" />
+                    <span>{project.githubUrl2 ? 'GitHub 1' : 'GitHub'}</span>
                   </span>
                 </motion.a>
+
+                {/* Second GitHub link for research projects */}
+                {project.githubUrl2 && (
+                  <motion.a
+                    href={project.githubUrl2}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`relative px-4 py-2 ${theme.iconBg} rounded-lg border-2 ${theme.iconBorder} shadow-lg backdrop-blur-sm font-medium text-white overflow-hidden group text-sm`}
+                    whileHover={{ 
+                      scale: 1.05, 
+                      y: -2,
+                      boxShadow: `0 10px 30px ${theme.icon.replace('text-', '')}60`
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0"
+                      initial={{ x: '-100%' }}
+                      whileHover={{ x: '100%' }}
+                      transition={{ duration: 0.5 }}
+                    />
+                    <span className="relative z-10 flex items-center space-x-1">
+                      <Github className="w-3 h-3" />
+                      <span>GitHub 2</span>
+                    </span>
+                  </motion.a>
+                )}
 
                 <motion.button
                   onClick={() => setSelectedProject(project.id)}
@@ -858,9 +861,9 @@ const ProjectsPage = () => {
           })}
         </motion.div>
 
-        {/* ULTIMATE HOLOGRAPHIC PROJECT SHOWCASE */}
+        {/* MODERN PROJECT SHOWCASE GRID */}
         <motion.div
-          className="relative flex flex-wrap justify-center gap-12 max-w-7xl mx-auto"
+          className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4"
           layout
         >
           <AnimatePresence mode="wait">
