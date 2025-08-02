@@ -190,7 +190,7 @@ const AboutPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="gradient-text">Who Am I?</span> 🤔
+              <span className="gradient-text">Who Am I?</span>
             </h2>
             <p className="text-lg text-foreground-muted max-w-2xl mx-auto">
               Beyond the code and algorithms, here's what makes me tick
@@ -205,26 +205,45 @@ const AboutPage = () => {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <div className="prose prose-lg text-foreground-muted">
-                <p className="text-lg leading-relaxed">
-                  Hey there! I'm <span className="text-primary font-semibold">Prithviraj Verma</span>, 
-                  but most people call me <span className="text-secondary font-semibold">PV</span>. 
-                  I'm a 21-year-old tech enthusiast from Ahmedabad, India, who fell in love with 
-                  programming and never looked back.
-                </p>
+              <div className="prose prose-lg text-foreground-muted space-y-6">
+                {/* Introduction */}
+                <div>
+                  <h3 className="text-xl font-bold text-primary mb-3">Introduction</h3>
+                  <p className="text-lg leading-relaxed">
+                    I'm <span className="text-primary font-semibold">Prithviraj Verma</span>, an AI/ML engineer 
+                    who transforms research breakthroughs into real-world solutions. I specialize in building 
+                    intelligent systems that solve complex problems across industries.
+                  </p>
+                </div>
                 
-                <p className="text-lg leading-relaxed">
-                  My journey started with curiosity about how things work, and that curiosity led me 
-                  to discover the magical world of <span className="text-accent font-semibold">Artificial Intelligence</span>. 
-                  Today, I'm passionate about building intelligent systems that can understand, learn, 
-                  and adapt to solve complex real-world problems.
-                </p>
+                {/* Education */}
+                <div>
+                  <h3 className="text-xl font-bold text-primary mb-3">Education</h3>
+                  <p className="text-lg leading-relaxed">
+                    Currently pursuing <span className="text-accent font-semibold">B.Tech in Computer Science</span> at 
+                    IITRAM, where I focus on machine learning, deep learning, and software engineering fundamentals.
+                  </p>
+                </div>
 
-                <p className="text-lg leading-relaxed">
-                  When I'm not coding, you'll find me mentoring fellow developers, participating in 
-                  hackathons, or exploring the latest advancements in AI/ML. I believe in the power 
-                  of community and love sharing knowledge with others.
-                </p>
+                {/* Passions & Goals */}
+                <div>
+                  <h3 className="text-xl font-bold text-primary mb-3">Passions & Goals</h3>
+                  <p className="text-lg leading-relaxed">
+                    I'm driven by the potential of AI to create positive impact. My goal is to bridge the gap 
+                    between cutting-edge research and practical applications, whether it's emotion recognition, 
+                    predictive analytics, or intelligent automation.
+                  </p>
+                </div>
+
+                {/* Notable Work */}
+                <div>
+                  <h3 className="text-xl font-bold text-primary mb-3">Notable Work</h3>
+                  <p className="text-lg leading-relaxed">
+                    Research internships, hackathon victories, and full-stack projects spanning computer vision, 
+                    NLP, and web development. I've built everything from earthquake prediction models to 
+                    production-ready applications.
+                  </p>
+                </div>
               </div>
 
               <div className="flex flex-wrap gap-4">
@@ -280,12 +299,12 @@ const AboutPage = () => {
                   </div>
                   
                   <blockquote className="text-lg font-medium text-foreground mb-4 italic">
-                    "To bridge the gap between cutting-edge AI research and practical applications 
-                    that make a positive impact on people's lives."
+                    "Every breakthrough in AI research deserves to become a solution that improves lives. 
+                    I build the bridge between innovation and impact."
                   </blockquote>
                   
                   <div className="text-sm text-muted-foreground">
-                    — Solving problems one model at a time
+                    — From research to reality
                   </div>
                 </div>
               </div>
@@ -319,11 +338,11 @@ const AboutPage = () => {
             <div className="relative z-10">
               <div className="mb-8">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  Let's Create Something <span className="gradient-text">Amazing</span> Together! 🚀
+                  Ready to <span className="gradient-text">Collaborate</span>?
                 </h2>
                 <p className="text-lg text-foreground-muted max-w-2xl mx-auto">
-                  Whether you have a project in mind, want to collaborate, or just want to chat about AI and technology, 
-                  I'm always excited to connect with fellow innovators.
+                  Let's discuss your next AI project, explore research opportunities, or simply connect. 
+                  I'm always excited to work with fellow innovators and problem-solvers.
                 </p>
               </div>
               
