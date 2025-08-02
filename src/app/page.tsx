@@ -203,7 +203,7 @@ const HomePage = () => {
               animate={{ opacity: [0.7, 1, 0.7] }}
               transition={{ duration: 3, repeat: Infinity }}
             >
-              {getGreeting()}! 👋
+              {getGreeting()}!
             </motion.div>
           </motion.div>
 
@@ -269,7 +269,7 @@ const HomePage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
             >
-              <span className="text-foreground">Hey, I'm </span>
+              <span className="text-foreground">I Engineer </span>
               <motion.span 
                 className="gradient-text inline-block"
                 animate={{ 
@@ -278,52 +278,38 @@ const HomePage = () => {
                 transition={{ duration: 8, repeat: Infinity }}
                 style={{ backgroundSize: "200% 200%" }}
               >
-                Prithviraj
+                Intelligent
               </motion.span>
-              <motion.span
-                className="inline-block ml-4"
-                animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
-                transition={{ duration: 2.5, repeat: Infinity, repeatDelay: 3 }}
-              >
-                👋
-              </motion.span>
+              <span className="text-foreground"> Systems</span>
             </motion.h1>
             
             <div className="text-2xl md:text-4xl text-foreground-secondary font-medium mb-6">
               <TypewriterEffect 
                 texts={[
-                  "Crafting intelligent AI systems",
-                  "Building the future with code",
-                  "Solving real-world problems",
-                  "AI Developer & Researcher",
-                  "Full Stack Engineer"
+                  "AI/ML Engineer & Researcher",
+                  "From Research to Production",
+                  "Solving Complex Problems with Code"
                 ]}
                 speed={80}
                 deleteSpeed={40}
-                delaySpeed={2500}
+                delaySpeed={3000}
               />
             </div>
           </motion.div>
 
-          {/* Enhanced Description with Personality */}
+          {/* Concise Description */}
           <motion.div variants={itemVariants} className="mb-10">
-            <p className="text-lg md:text-xl text-foreground-muted max-w-4xl mx-auto text-balance leading-relaxed">
+            <p className="text-xl md:text-2xl text-foreground-muted max-w-3xl mx-auto text-balance leading-relaxed font-medium">
               <motion.span
-                className="inline-block"
-                whileHover={{ scale: 1.05, color: "rgb(59 130 246)" }}
+                className="inline-block text-primary"
+                whileHover={{ scale: 1.05 }}
               >
-                🚀 Passionate about
-              </motion.span>{" "}
-              transforming complex AI challenges into elegant solutions. From emotion recognition systems 
-              to predictive analytics, I bridge the gap between cutting-edge research and practical applications.
-              <br />
-              <motion.span
-                className="inline-block mt-2 text-primary font-medium"
-                animate={{ opacity: [0.7, 1, 0.7] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                ✨ Currently building the future, one model at a time.
+                Transforming breakthrough research into production-ready AI solutions.
               </motion.span>
+              <br />
+              <span className="text-foreground-secondary">
+                Ready to push the boundaries of what's possible?
+              </span>
             </p>
           </motion.div>
 
@@ -343,7 +329,7 @@ const HomePage = () => {
                     transition={{ duration: 0.5 }}
                   />
                   <Eye size={20} />
-                  <span className="relative z-10">Explore My Work</span>
+                  <span className="relative z-10">View Projects</span>
                   <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </motion.div>
               </Link>
